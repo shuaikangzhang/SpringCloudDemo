@@ -39,6 +39,7 @@
     --- consumer-feign-hystrix-9004 : 用于测试hystrix服务降级
     --- hystrix-dashboard-9005 ： hystrix仪表盘监控
     --- zuul-gateway-9527 : zuul简单的地址映射
+    --- nacos-7004 : nacos的使用
 
 ## 2 目录说明 ##
 - ***因为牵涉到消费者，服务者等相关内容，每次测试可能会牵涉多个模块，这里分组介绍***。
@@ -1299,3 +1300,41 @@ eureka:
     service-url:
       defaultZone: http://erueka7001:7001/eureka/
 ```
+
+### 2.9 nacos ###
+- 总体介绍
+    1. 使用nacos作为服务发现。
+    2. 使用nacos时，首先需要安装nacos的相关服务。安装方式以官网为准：`https://nacos.io/zh-cn/docs/quick-start.html`
+- 安装时候的注意事项（这里说的是window版本的）：
+    1. 下载好包后，首先新建一个库，将nacos>>>config目录下的nacos-mysql文件导入到数据库。然后修改数据库的配置，包含链接配置，数据库账号密码。
+    2. 启动时，如果是单机模式，要改成单机运行的模式。
+
+    具体的安装和运行过程，这里不做介绍，毕竟网上一搜一大堆。
+   
+    *注意：一定要想让nacos跑起来才行。*
+    *注意：一定要想让nacos跑起来才行。*
+    *注意：一定要想让nacos跑起来才行。*
+    
+#### 2.9.1 nacos-7004 ####   
+##### a.说明 #####
+- 本模块不是使用nacos的必须的模块。
+- 本模块的作用只是可以通过接口的形式获取nacos配置参数信息而已。
+##### b.注意事项 #####
+
+##### c.实现方式 #####
+- 就是个普通的springboot项目。配置文件加上
+`server:
+port: 7004
+spring:
+application:
+name: example
+cloud:
+nacos:
+config:
+file-extension: yaml
+server-addr: 127.0.0.1:8848`
+
+##### d.测试启动 #####
+1. 启动本模块（要保证nacos已经启动了）
+2. 访问：`http://localhost:7004/config/get`
+

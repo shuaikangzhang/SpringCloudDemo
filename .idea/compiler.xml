@@ -6,27 +6,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="config-server-3344" />
-        <module name="config-eureka-server-7001" />
-        <module name="zuul-gateway-9527" />
-        <module name="consumer-feign-9003" />
-        <module name="hystrix-client-8012" />
-        <module name="hystrix-client-8011" />
-        <module name="eureka-server-7003" />
-        <module name="provider-dept-8001" />
-        <module name="consumer-ribbon-9002" />
-        <module name="eureka-client-8003" />
         <module name="consumer-ribbon-9001" />
-        <module name="hystrix-dashboard-9005" />
-        <module name="eureka-server-7001" />
-        <module name="config-client-3355" />
-        <module name="eureka-client-8002" />
-        <module name="eureka-client-8001" />
         <module name="config-eureka-client-8001" />
-        <module name="consumer-dept-8002" />
+        <module name="config-server-3344" />
+        <module name="consumer-ribbon-9002" />
+        <module name="nacos-7004" />
+        <module name="consumer-feign-9003" />
+        <module name="eureka-server-7001" />
         <module name="consumer-feign-hystrix-9004" />
         <module name="eureka-server-7002" />
+        <module name="hystrix-dashboard-9005" />
+        <module name="eureka-server-7003" />
+        <module name="nacos-8848" />
+        <module name="provider-dept-8001" />
+        <module name="config-client-3355" />
+        <module name="config-eureka-server-7001" />
+        <module name="hystrix-client-8012" />
         <module name="common-api" />
+        <module name="hystrix-client-8011" />
+        <module name="consumer-dept-8002" />
+        <module name="eureka-client-8001" />
+        <module name="eureka-client-8002" />
+        <module name="zuul-gateway-9527" />
+        <module name="eureka-client-8003" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -35,6 +37,7 @@
       <module name="eureka-test" target="1.8" />
       <module name="ribbon-8002" target="1.8" />
       <module name="ribbon-test" target="1.8" />
+      <module name="springsecurityoauth2server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -61,9 +64,12 @@
       <module name="hystrix-client-8011" options="-parameters" />
       <module name="hystrix-client-8012" options="-parameters" />
       <module name="hystrix-dashboard-9005" options="-parameters" />
+      <module name="nacos-7004" options="-parameters" />
+      <module name="nacos-8848" options="-parameters" />
       <module name="provider-dept-8001" options="-parameters" />
       <module name="ribbon-8002" options="-parameters" />
       <module name="ribbon-test" options="-parameters" />
+      <module name="springsecurityoauth2server" options="-parameters" />
       <module name="zuul-gateway-9527" options="-parameters" />
     </option>
   </component>

@@ -33,6 +33,7 @@
         <module>consumer-feign-hystrix-9004</module>
         <module>hystrix-dashboard-9005</module>
         <module>zuul-gateway-9527</module>
+        <module>nacos-7004</module>
     </modules>
     <properties>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
